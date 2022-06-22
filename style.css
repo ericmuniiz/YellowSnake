@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/*usado para importar uma fonte, sem baixá-la, pelo google fonts*/
+
+#canvas {
+    margin-left:10px;
+    margin-right: 10px;
+    width: 500px;
+    border: 2px solid yellowgreen;
+
+}
+body{
+    font-family: 'Righteous', cursive;
+    color : yellow;
+    background-color:darkolivegreen;
+}
+.score, .menu {
+    text-align:center;
+    font-size: 50px;
+    background-color: black;
+    width: 500px;
+    margin-left: 36%;
+    margin-bottom: 10px;
+    border: 2px solid yellowgreen;
+}
+.lados .img1{
+    width: 500px;
+    margin-left: 170px;
+    padding-bottom: 100px ;
+}
+.lados .img2{
+    width: 500px;
+    margin-right: 100px;
+    padding-bottom: 100px ;
+}
+.nomes {
+    text-align:center;
+    font-size: 20px;
+    background-color: black;
+    width: 500px;
+    margin-left: 36%;
+    margin-bottom: 4px;
+    margin-top: 10px;
+    height: 50px;
+    border: 2px solid yellowgreen;
+}
