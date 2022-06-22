@@ -36,7 +36,7 @@ var rastro = []; //rastro
 corpo = 3;       //tamanho
 
 
-// função para que a cobra apareça do outro lado quando passa por um lado da tela.
+// função para que a cobra parar quando bate nas margens.
 function cobrasenai() {
   x += vx;
   y += vy;
@@ -107,7 +107,7 @@ function cobrasenai() {
 
     //aumento do corpo e a pontuação
     corpo++;
-    score++;
+    score+=10;
     document.getElementById('score').innerHTML = "SCORE: " + score;
 
     //método utilizado para randomizar a posição x da fruts, quando é comida
@@ -126,16 +126,6 @@ function cobrasenai() {
 
   }
 }
-
-
-var botao = document.getElementById("botao");
-botao.addEventListener("click", MudaCor);
-
-function MudaCor() {
-  document.getElementsByTagName("body")[0].style.backgroundColor = "green";
-}
-
-
 
 // função para chamar o "cobrasenai" em um intervalo de tempo dado como segundo parâmetro.
 setInterval(cobrasenai, 80);
