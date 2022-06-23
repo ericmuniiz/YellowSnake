@@ -1,3 +1,12 @@
+//************COMENTÁRIO PRÉVIO*********
+//Bem vindo usuário
+//abaixo o Códico de JavaScript para fazer funcionar o jogo.;
+//Usamos a o .Push para a cobra se deslocar e uma estrutura de repetição para conferir o tamanho do corpo e
+// o .shift para que a cobra mantenha o tamanho do corpo.;
+//Para crescer a "cobra" usamos uma condicional para verificar a posição da "cabeça da cobra" 
+//e da fruta. Caso seja a mesma posição aumenta o score e o corpo da "cobra".;
+//A validação do término do jogo é feita por uma condicional que verifica a posição da cabeça em relação ao corpo, e 
+//o choque nas extremidades do grid por uma função com condicionais verificando a posição da cobra em relação as extremidades.;
 var tela = document.getElementById('canvas'); // Váriavel que seleciona a tela.
 var pincel = tela.getContext("2d"); // Váriavel usada para pintar na tela.
 
@@ -19,10 +28,10 @@ var frutax = 15;
 var frutay = 15;
 
 // Variáveis de posição (pelo teclado)
-var esquerda = 37
-var cima = 38
-var direita = 39
-var baixo = 40
+var esquerda = 37;
+var cima = 38;
+var direita = 39;
+var baixo = 40;
 
 // Variável que define o tamanho da peça do jogo
 var tamanhop = 20;
@@ -77,7 +86,7 @@ function cobrasenai() {
   pincel.fillStyle = "yellow";
 
 
-  // estrutura de repetição criada para a cobra poder "crescer" até 5 quando iniciar      
+  // estrutura de repetição criada para a cobra poder "crescer" até 3 quando iniciar      
   for (var i = 0; i < rastro.length; i++) {
     pincel.fillRect(rastro[i].x * tamanhop, rastro[i].y * tamanhop, tamanhop - 1, tamanhop - 1);
 
@@ -89,9 +98,9 @@ function cobrasenai() {
       corpo = 3;
       score = 0;
 
-    }
+    };
 
-  }
+  };
 
 
   // método utilizado para dar movimento a cobra, se empurra a "cada passo"
@@ -100,7 +109,7 @@ function cobrasenai() {
   // estrutura de repetição criada para que a cobra se mantenha no tamanho a "cada passo"
   while (rastro.length > corpo) {
     rastro.shift();
-  }
+  };
 
   // condicional para que ele possa "comer" a fruta e aumentar seu tamanho quando estiverem no mesmo lugar
   if (frutax == x && frutay == y) {
@@ -114,7 +123,7 @@ function cobrasenai() {
     frutax = Math.floor(Math.random() * qntpecas);
     //método utilizado para randomizar a posição y da fruta, quando é comida
     frutay = Math.floor(Math.random() * qntpecas);
-  }
+  };
   for (var i = 0; i < rastro.length; i++) {
 
     if (rastro[i].x == frutax && rastro[i].y == frutay) {
@@ -122,10 +131,10 @@ function cobrasenai() {
       frutax = Math.floor(Math.random() * qntpecas);
       //método utilizado para randomizar a posição y da fruta, quando é comida
       frutay = Math.floor(Math.random() * qntpecas);
-    }
+    };
 
-  }
-}
+  };
+};
 
 // função para chamar o "cobrasenai" em um intervalo de tempo dado como segundo parâmetro.
 setInterval(cobrasenai, 80);
